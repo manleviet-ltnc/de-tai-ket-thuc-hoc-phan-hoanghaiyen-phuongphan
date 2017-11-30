@@ -7,13 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Drawing;
 
 namespace NextNumber.From
 {
     public partial class Level1 : Form
     {
-        int demClick = 0;
+        private int demClick = 0;
+        private int _counter;
+        private bool _isStart;
+        private bool _isEnd;
+        private bool _isDie;
+        private const int DEFAULT_TIME = 15;
+        int[] arr = new int[8];
+
         public Level1()
         {
             InitializeComponent();
@@ -21,34 +27,57 @@ namespace NextNumber.From
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-                Button[] btArr = new Button[7];
-                int[] h = new int[7];
-                h = Random();
-                Random rd = new Random();
-                Point[] poit = new Point[7];
-                Size[] size = new Size[7];
-                poit = InitPoint();
+            if (!Timer1.Enabled)
+            {
+                _counter = 0;
+                Timer1.Interval = 1000;
+                Timer1.Tick += Timer1_Tick;
+                Timer1.Start();
+                Timer1.Enabled = true;
+                _isStart = true;
+            }
 
-                size = InitSize();
-                for (int i = 0; i < btArr.Length; i++)
-                {
+            Button[] btArr = new Button[7];
+            int[] h = new int[7];
+            h = Random();
+            Random rd = new Random();
+            Point[] poit = new Point[7];
+            Size[] size = new Size[7];
+            poit = InitPoint();
 
-                    btArr[i] = new Button();
-                    // btArr[i].BackColor = Color.Yellow;
-                    btArr[i].Size = size[i];
-                    btArr[i].Location = poit[i];
+            size = InitSize();
+            for (int i = 0; i < btArr.Length; i++)
+            {
 
-                    btArr[i].Text = h[i].ToString();
-                    btArr[i].Font = new Font(FontFamily.GenericSansSerif, 12.0F, FontStyle.Bold);
-                    btArr[i].Enabled = true;
-                    btArr[i].Click += Myclick;
-                    panel1.Controls.Add(btArr[i]);
-                }
+                btArr[i] = new Button();
+                // btArr[i].BackColor = Color.Yellow;
+                btArr[i].Size = size[i];
+                btArr[i].Location = poit[i];
+
+                btArr[i].Text = h[i].ToString();
+                btArr[i].Font = new Font(FontFamily.GenericSansSerif, 12.0F, FontStyle.Bold);
+                btArr[i].Enabled = true;
+                btArr[i].Click += Myclick;
+                panel1.Controls.Add(btArr[i]);
+            }
         }
-        int[] arr = new int[8];
-        private void Myclick(object sender, EventArgs e)
+
+        private void Timer1_Tick(object sender, EventArgs e)
         {
 
+            lblTimer.Text = Math.Abs(_counter - DEFAULT_TIME).ToString("00");
+            if (!_isEnd && _counter == DEFAULT_TIME)
+            {
+                Timer1.Stop();
+                _isEnd = true;
+                Timer1.Enabled = false;
+                MessageBox.Show("Thua cuộc");
+            }
+            _counter++;
+        }
+
+        private void Myclick(object sender, EventArgs e)
+        {
             int x = Int32.Parse((sender as Button).Text);
 
             demClick++;
@@ -66,7 +95,6 @@ namespace NextNumber.From
                     MessageBox.Show("Thua cuộc, Thử lại lần nữa");
                 }
             }
-
         }
         private Point[] InitPoint()
         {
@@ -97,7 +125,7 @@ namespace NextNumber.From
         {
             int[] lotteryPool = new int[7];
             int[] lotteryPool1 = new int[7];
-            for (int x = 0; x < lotteryPool.Length; x++)
+            for (int x = 0; x < lotteryPool.Length; x++) // generates an array of all 50 possible numbers
             {
                 lotteryPool[x] = x + 1;
             }
@@ -108,13 +136,13 @@ namespace NextNumber.From
             int dem = 0;
             for (y = 0; y < 7; y++)
             {
-                randomIndex = rnd.Next(0, 7); 
-                if (lotteryPool[randomIndex] != 0) 
+                randomIndex = rnd.Next(0, 7);
+                if (lotteryPool[randomIndex] != 0)
                 {
                     Console.WriteLine(lotteryPool[randomIndex]);
                     lotteryPool1[dem] = lotteryPool[randomIndex];
                     dem++;
-                    lotteryPool[randomIndex] = 0;         
+                    lotteryPool[randomIndex] = 0;
                 }
                 else
                 {
@@ -123,11 +151,6 @@ namespace NextNumber.From
             }
 
             return lotteryPool1;
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            Close();
         }
     }
 }
