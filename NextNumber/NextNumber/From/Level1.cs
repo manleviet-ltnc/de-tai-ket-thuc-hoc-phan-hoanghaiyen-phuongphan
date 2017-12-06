@@ -9,12 +9,13 @@ namespace NextNumber.From
 {
     public partial class Level1 : Form
     {
+        private bool _islost = false;
         private int demClick = 0;
         private int _counter;
         private bool _isStart;
         private bool _isEnd;
         private bool _isDie;
-        private const int DEFAULT_TIME = 20;
+        private const int DEFAULT_TIME = 10;
         int[] arr = new int[8];
 
 
@@ -25,6 +26,7 @@ namespace NextNumber.From
 
         private void btnStart_Click(object sender, EventArgs e)
         {
+            
             if(!timer1.Enabled)
             {
                 _counter = 0;
@@ -34,6 +36,7 @@ namespace NextNumber.From
                 timer1.Enabled = true;
                 _isStart = true;
             }
+            this.timer2.Start();
 
             Button[] btArr = new Button[7];
             int[] h = new int[7];
@@ -60,7 +63,7 @@ namespace NextNumber.From
             }
         }
 
-        private void Timer1_Tick(object sender, EventArgs e)
+       private void Timer1_Tick(object sender, EventArgs e)
         {
             
             lb_time.Text = Math.Abs(_counter - DEFAULT_TIME).ToString("00");
@@ -70,15 +73,26 @@ namespace NextNumber.From
                 _isEnd = true;
                 timer1.Enabled = false;
                 MessageBox.Show("thua cuộc");
+               // Enables();
             }
             _counter++;
         }
-
+       private void Enables()
+       {
+           panel1.Enabled = false;
+       }
         private void Myclick(object sender, EventArgs e)
         {
             int x = Int32.Parse((sender as Button).Text);
-
-            demClick++;
+            if (_islost == false)
+            {
+                demClick++;
+            }
+            else
+            {
+                demClick = 0;
+            }
+            
             arr[demClick] = x;
             (sender as Button).Enabled = false;
 
@@ -86,13 +100,60 @@ namespace NextNumber.From
             {
                 if (arr[1] == 1 && arr[2] == 2 && arr[3] == 3 && arr[4] == 4 && arr[5] == 5 && arr[6] == 6 && arr[7] == 7)
                 {
-                    MessageBox.Show("Chúc mừng bạn đã chiến thắng");
+                  
+                    won();
+                    
                 }
                 else
                 {
-                    MessageBox.Show("Thua cuộc, Thử lại lần nữa");
+                    
+                    lost();
                 }
             }
+        }
+
+        private void lost()
+        {
+            this.timer1.Stop();
+            this.timer2.Stop();
+            btnStart.Hide();
+            Button rePlay = new Button();
+            rePlay.Location = new Point(12, 13);
+            rePlay.Size = new Size(75, 37);
+            rePlay.Text = "rePlay";
+            rePlay.Click += rePlay_click;
+            this.Controls.Add(rePlay);
+            Enables();
+            MessageBox.Show("Thua cuộc, Thử lại lần nữa");
+                   
+        }
+
+        private void rePlay_click(object sender, EventArgs e)
+        {
+
+            this.Hide();
+            new Level1().Show();
+        }
+
+        private void won()
+        {
+            this.timer1.Stop();
+            this.timer2.Stop();
+            btnStart.Hide();
+             Button level2= new Button();
+             level2.Location = new Point(12, 13);
+             level2.Size = new Size(75, 37);
+             level2.Text = "Level2";
+             level2.Click += level2_click;
+             this.Controls.Add(level2);
+             MessageBox.Show("Chúc mừng bạn đã chiến thắng");
+            
+        }
+
+        private void level2_click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Level2().Show();
         }
         private Point[] InitPoint()
         {
@@ -150,5 +211,42 @@ namespace NextNumber.From
 
             return lotteryPool1;
         }
+
+        private void timer1_Tick_1(object sender, EventArgs e)
+        {
+          //  this.progressBar1.Increment(1);
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            this.progressBar1.Increment(1);
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lb_time_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+       
     }
 }

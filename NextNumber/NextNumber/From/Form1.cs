@@ -19,9 +19,14 @@ namespace NextNumber
         }
         private void btnPlay_Click(object sender, EventArgs e)
         {
-            Level2 lv1 = new Level2();
+            Level1 lv1 = new Level1();
             this.Hide();
             lv1.Show();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
