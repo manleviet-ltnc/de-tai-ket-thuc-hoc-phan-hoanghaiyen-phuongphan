@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace NextNumber.From
@@ -17,8 +14,9 @@ namespace NextNumber.From
         private bool _isStart;
         private bool _isEnd;
         private bool _isDie;
-        private const int DEFAULT_TIME = 15;
+        private const int DEFAULT_TIME = 20;
         int[] arr = new int[8];
+
 
         public Level1()
         {
@@ -27,13 +25,13 @@ namespace NextNumber.From
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            if (!Timer1.Enabled)
+            if(!timer1.Enabled)
             {
                 _counter = 0;
-                Timer1.Interval = 1000;
-                Timer1.Tick += Timer1_Tick;
-                Timer1.Start();
-                Timer1.Enabled = true;
+                timer1.Interval = 1000;
+                timer1.Tick += Timer1_Tick;
+                timer1.Start();
+                timer1.Enabled = true;
                 _isStart = true;
             }
 
@@ -64,14 +62,14 @@ namespace NextNumber.From
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
-
-            lblTimer.Text = Math.Abs(_counter - DEFAULT_TIME).ToString("00");
+            
+            lb_time.Text = Math.Abs(_counter - DEFAULT_TIME).ToString("00");
             if (!_isEnd && _counter == DEFAULT_TIME)
             {
-                Timer1.Stop();
+                timer1.Stop();
                 _isEnd = true;
-                Timer1.Enabled = false;
-                MessageBox.Show("Thua cuộc");
+                timer1.Enabled = false;
+                MessageBox.Show("thua cuộc");
             }
             _counter++;
         }
@@ -136,13 +134,13 @@ namespace NextNumber.From
             int dem = 0;
             for (y = 0; y < 7; y++)
             {
-                randomIndex = rnd.Next(0, 7);
-                if (lotteryPool[randomIndex] != 0)
+                randomIndex = rnd.Next(0, 7); 
+                if (lotteryPool[randomIndex] != 0) 
                 {
                     Console.WriteLine(lotteryPool[randomIndex]);
                     lotteryPool1[dem] = lotteryPool[randomIndex];
                     dem++;
-                    lotteryPool[randomIndex] = 0;
+                    lotteryPool[randomIndex] = 0;         
                 }
                 else
                 {

@@ -19,7 +19,7 @@ namespace NextNumber
         }
         private void btnPlay_Click(object sender, EventArgs e)
         {
-            Level1 lv1 = new Level1();
+            Level2 lv1 = new Level2();
             this.Hide();
             lv1.Show();
         }

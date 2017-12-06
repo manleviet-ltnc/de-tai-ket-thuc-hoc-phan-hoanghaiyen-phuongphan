@@ -31,9 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnStart = new System.Windows.Forms.Button();
-            this.lblTimer = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lb_time = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // panel1
@@ -47,50 +47,47 @@
             // 
             this.btnStart.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStart.ForeColor = System.Drawing.Color.Green;
-            this.btnStart.Location = new System.Drawing.Point(12, 12);
+            this.btnStart.Location = new System.Drawing.Point(12, 13);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(75, 37);
-            this.btnStart.TabIndex = 0;
+            this.btnStart.TabIndex = 2;
             this.btnStart.Text = "Start";
             this.btnStart.UseVisualStyleBackColor = true;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
-            // lblTimer
+            // lb_time
             // 
-            this.lblTimer.AutoSize = true;
-            this.lblTimer.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblTimer.Location = new System.Drawing.Point(181, 19);
-            this.lblTimer.Name = "lblTimer";
-            this.lblTimer.Size = new System.Drawing.Size(32, 24);
-            this.lblTimer.TabIndex = 2;
-            this.lblTimer.Text = "00";
+            this.lb_time.AutoSize = true;
+            this.lb_time.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_time.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lb_time.Location = new System.Drawing.Point(170, 22);
+            this.lb_time.Name = "lb_time";
+            this.lb_time.Size = new System.Drawing.Size(32, 24);
+            this.lb_time.TabIndex = 3;
+            this.lb_time.Text = "00";
             // 
-            // label1
+            // label2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(206, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(21, 26);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "s";
-            // 
-            // Timer1
-            // 
-            this.Timer1.Tick += new System.EventHandler(this.Timer1_Tick);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.label2.Location = new System.Drawing.Point(195, 21);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(18, 24);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "s";
             // 
             // Level1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(268, 380);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblTimer);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lb_time);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.panel1);
             this.Name = "Level1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Level 1";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -100,8 +97,8 @@
         #endregion
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnStart;
-        private System.Windows.Forms.Label lblTimer;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Timer Timer1;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lb_time;
+        private System.Windows.Forms.Label label2;
     }
 }

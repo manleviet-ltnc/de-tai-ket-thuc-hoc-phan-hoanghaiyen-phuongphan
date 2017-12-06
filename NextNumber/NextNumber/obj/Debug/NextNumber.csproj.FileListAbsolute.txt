@@ -3,9 +3,10 @@ E:\github\de-tai-ket-thuc-hoc-phan-hoanghaiyen-phuongphan\NextNumber\NextNumber\
 E:\github\de-tai-ket-thuc-hoc-phan-hoanghaiyen-phuongphan\NextNumber\NextNumber\bin\Debug\NextNumber.pdb
 E:\github\de-tai-ket-thuc-hoc-phan-hoanghaiyen-phuongphan\NextNumber\NextNumber\obj\Debug\NextNumber.csprojResolveAssemblyReference.cache
 E:\github\de-tai-ket-thuc-hoc-phan-hoanghaiyen-phuongphan\NextNumber\NextNumber\obj\Debug\NextNumber.Form1.resources
+E:\github\de-tai-ket-thuc-hoc-phan-hoanghaiyen-phuongphan\NextNumber\NextNumber\obj\Debug\NextNumber.From.Level1.resources
 E:\github\de-tai-ket-thuc-hoc-phan-hoanghaiyen-phuongphan\NextNumber\NextNumber\obj\Debug\NextNumber.Properties.Resources.resources
 E:\github\de-tai-ket-thuc-hoc-phan-hoanghaiyen-phuongphan\NextNumber\NextNumber\obj\Debug\NextNumber.csproj.GenerateResource.Cache
 E:\github\de-tai-ket-thuc-hoc-phan-hoanghaiyen-phuongphan\NextNumber\NextNumber\obj\Debug\NextNumber.csproj.CoreCompileInputs.cache
 E:\github\de-tai-ket-thuc-hoc-phan-hoanghaiyen-phuongphan\NextNumber\NextNumber\obj\Debug\NextNumber.exe
 E:\github\de-tai-ket-thuc-hoc-phan-hoanghaiyen-phuongphan\NextNumber\NextNumber\obj\Debug\NextNumber.pdb
-E:\github\de-tai-ket-thuc-hoc-phan-hoanghaiyen-phuongphan\NextNumber\NextNumber\obj\Debug\NextNumber.From.Level1.resources
+E:\github\de-tai-ket-thuc-hoc-phan-hoanghaiyen-phuongphan\NextNumber\NextNumber\obj\Debug\NextNumber.From.Level2.resources
