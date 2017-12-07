@@ -72,7 +72,7 @@ namespace NextNumber.From
                 timer1.Stop();
                 _isEnd = true;
                 timer1.Enabled = false;
-                MessageBox.Show("thua cuộc");
+                MessageBox.Show("Thua cuộc");
                // Enables();
             }
             _counter++;
@@ -99,14 +99,11 @@ namespace NextNumber.From
             if (demClick == 7)
             {
                 if (arr[1] == 1 && arr[2] == 2 && arr[3] == 3 && arr[4] == 4 && arr[5] == 5 && arr[6] == 6 && arr[7] == 7)
-                {
-                  
-                    won();
-                    
+                { 
+                    won();    
                 }
                 else
                 {
-                    
                     lost();
                 }
             }
@@ -119,7 +116,7 @@ namespace NextNumber.From
             btnStart.Hide();
             Button rePlay = new Button();
             rePlay.Location = new Point(12, 13);
-            rePlay.Size = new Size(75, 37);
+            rePlay.Size = new Size(75,37);
             rePlay.Text = "rePlay";
             rePlay.Click += rePlay_click;
             this.Controls.Add(rePlay);
@@ -221,32 +218,5 @@ namespace NextNumber.From
         {
             this.progressBar1.Increment(1);
         }
-
-        private void progressBar1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lb_time_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-       
     }
 }
