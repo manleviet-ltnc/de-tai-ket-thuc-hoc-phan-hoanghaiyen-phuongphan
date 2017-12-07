@@ -43,7 +43,7 @@
             // 
             this.panel1.Location = new System.Drawing.Point(12, 85);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(319, 285);
+            this.panel1.Size = new System.Drawing.Size(248, 285);
             this.panel1.TabIndex = 1;
             // 
             // btnStart
@@ -60,7 +60,7 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(215, 31);
+            this.progressBar1.Location = new System.Drawing.Point(124, 30);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(116, 19);
             this.progressBar1.TabIndex = 5;
@@ -77,7 +77,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(284, 15);
+            this.label1.Location = new System.Drawing.Point(193, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 7;
@@ -90,7 +90,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(212, 13);
+            this.label2.Location = new System.Drawing.Point(121, 13);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(23, 13);
             this.label2.TabIndex = 8;
@@ -100,7 +100,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(337, 380);
+            this.ClientSize = new System.Drawing.Size(283, 380);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lb_time);
