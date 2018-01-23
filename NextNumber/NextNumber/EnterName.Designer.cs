@@ -37,34 +37,38 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(39, 37);
+            this.label1.Location = new System.Drawing.Point(58, 57);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(50, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "hoten";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(103, 37);
+            this.textBox1.Location = new System.Drawing.Point(154, 57);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(148, 26);
             this.textBox1.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(39, 84);
+            this.label2.Location = new System.Drawing.Point(58, 129);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(214, 13);
+            this.label2.Size = new System.Drawing.Size(321, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Please, Enter your hoten, default:HoangYen";
             // 
             // Ok
             // 
             this.Ok.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.Ok.Location = new System.Drawing.Point(221, 34);
+            this.Ok.Location = new System.Drawing.Point(332, 52);
+            this.Ok.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Ok.Name = "Ok";
-            this.Ok.Size = new System.Drawing.Size(68, 23);
+            this.Ok.Size = new System.Drawing.Size(102, 35);
             this.Ok.TabIndex = 3;
             this.Ok.Text = "Ok";
             this.Ok.UseVisualStyleBackColor = true;
@@ -72,13 +76,15 @@
             // 
             // EnterName
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(405, 127);
+            this.ClientSize = new System.Drawing.Size(608, 195);
             this.Controls.Add(this.Ok);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
             this.Name = "EnterName";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EnterName";

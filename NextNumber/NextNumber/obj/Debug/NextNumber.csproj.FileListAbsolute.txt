@@ -38,3 +38,15 @@ C:\Users\DUCTRAN\Downloads\NextNumber_Vs1\NextNumber\obj\Debug\NextNumber.Proper
 C:\Users\DUCTRAN\Downloads\NextNumber_Vs1\NextNumber\obj\Debug\NextNumber.csproj.GenerateResource.Cache
 C:\Users\DUCTRAN\Downloads\NextNumber_Vs1\NextNumber\obj\Debug\NextNumber.EnterName.resources
 C:\Users\DUCTRAN\Downloads\NextNumber_Vs1\NextNumber\obj\Debug\NextNumber.HighestScore.resources
+D:\github\de-tai-ket-thuc-hoc-phan-hoanghaiyen-phuongphan\NextNumber\NextNumber\bin\Debug\NextNumber.exe.config
+D:\github\de-tai-ket-thuc-hoc-phan-hoanghaiyen-phuongphan\NextNumber\NextNumber\bin\Debug\NextNumber.exe
+D:\github\de-tai-ket-thuc-hoc-phan-hoanghaiyen-phuongphan\NextNumber\NextNumber\bin\Debug\NextNumber.pdb
+D:\github\de-tai-ket-thuc-hoc-phan-hoanghaiyen-phuongphan\NextNumber\NextNumber\obj\Debug\NextNumber.csprojResolveAssemblyReference.cache
+D:\github\de-tai-ket-thuc-hoc-phan-hoanghaiyen-phuongphan\NextNumber\NextNumber\obj\Debug\NextNumber.EnterName.resources
+D:\github\de-tai-ket-thuc-hoc-phan-hoanghaiyen-phuongphan\NextNumber\NextNumber\obj\Debug\NextNumber.formMain.resources
+D:\github\de-tai-ket-thuc-hoc-phan-hoanghaiyen-phuongphan\NextNumber\NextNumber\obj\Debug\NextNumber.HighestScore.resources
+D:\github\de-tai-ket-thuc-hoc-phan-hoanghaiyen-phuongphan\NextNumber\NextNumber\obj\Debug\NextNumber.Properties.Resources.resources
+D:\github\de-tai-ket-thuc-hoc-phan-hoanghaiyen-phuongphan\NextNumber\NextNumber\obj\Debug\NextNumber.csproj.GenerateResource.Cache
+D:\github\de-tai-ket-thuc-hoc-phan-hoanghaiyen-phuongphan\NextNumber\NextNumber\obj\Debug\NextNumber.csproj.CoreCompileInputs.cache
+D:\github\de-tai-ket-thuc-hoc-phan-hoanghaiyen-phuongphan\NextNumber\NextNumber\obj\Debug\NextNumber.exe
+D:\github\de-tai-ket-thuc-hoc-phan-hoanghaiyen-phuongphan\NextNumber\NextNumber\obj\Debug\NextNumber.pdb
