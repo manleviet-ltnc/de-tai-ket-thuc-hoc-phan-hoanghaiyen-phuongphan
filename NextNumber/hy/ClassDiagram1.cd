@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="NextNumber.KhachHang">
+    <Position X="1.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAABACABEAAAAAAAAAAAICAAAAAAAAg=</HashCode>
+      <FileName>KhachHang.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="VeMayBay" />
+      <Property Name="LoaiKhachHang" />
+      <Property Name="SoDienThoai" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="NextNumber.SoDienThoai">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>PhoneNumber.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NextNumber.VeMayBay">
+    <Position X="1.5" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAACAEAAQAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>VeMayBay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NextNumber.LoaiKhachHang">
+    <Position X="5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAEAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LoaiKhachHang.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
